@@ -38,8 +38,8 @@ namespace Marofon.com
                 SIsmenenie sIsmenenie = new SIsmenenie();
                 if(sIsmenenie.ShowDialog() == DialogResult.Yes)
                 {
-                    RegistryKey Key = new Registry.CurrentUser.CreateSubKey("SOFTWARE\\Iscluchenie.Marafon.Api.AppClient");
-                    Key.SetValue("Iscluchenie.Marafon.Api.AppClient", sIsmenenie.textBox1);
+                    RegistryKey Key = Registry.CurrentUser.CreateSubKey("SOFTWARE\\Iscluchenie.Marafon.Api.AppClient");
+                    Key.SetValue("Iscluchenie.Marafon.Api.AppClient", sIsmenenie.textBox1.Text);
                 }
             }
         }
