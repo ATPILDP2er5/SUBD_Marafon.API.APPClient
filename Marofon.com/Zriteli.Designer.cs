@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Zriteli));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,14 +43,15 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label_Who = new System.Windows.Forms.Label();
             this.dGV_Uchastniki = new System.Windows.Forms.DataGridView();
-            this.StepAhed = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.F_Uchastnick = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.I_Uchastnik = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.O_Uchastnika = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.b_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contry = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StepAhed = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_Marafon)).BeginInit();
@@ -104,11 +105,11 @@
             this.LongMar,
             this.Date_Start,
             this.Vznos});
-            this.dGV_Marafon.Location = new System.Drawing.Point(244, 180);
+            this.dGV_Marafon.Location = new System.Drawing.Point(244, 196);
             this.dGV_Marafon.Name = "dGV_Marafon";
             this.dGV_Marafon.RowHeadersWidth = 51;
             this.dGV_Marafon.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dGV_Marafon.Size = new System.Drawing.Size(544, 323);
+            this.dGV_Marafon.Size = new System.Drawing.Size(544, 307);
             this.dGV_Marafon.TabIndex = 2;
             this.dGV_Marafon.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_Marafon_CellContentDoubleClick);
             // 
@@ -135,9 +136,9 @@
             // 
             // Date_Start
             // 
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.Date_Start.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Date_Start.DefaultCellStyle = dataGridViewCellStyle3;
             this.Date_Start.HeaderText = "Дата проведения";
             this.Date_Start.MinimumWidth = 6;
             this.Date_Start.Name = "Date_Start";
@@ -174,39 +175,12 @@
             this.Pol,
             this.b_day,
             this.Contry});
-            this.dGV_Uchastniki.Location = new System.Drawing.Point(244, 180);
+            this.dGV_Uchastniki.Location = new System.Drawing.Point(244, 196);
             this.dGV_Uchastniki.Name = "dGV_Uchastniki";
             this.dGV_Uchastniki.RowHeadersWidth = 51;
             this.dGV_Uchastniki.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dGV_Uchastniki.Size = new System.Drawing.Size(544, 323);
+            this.dGV_Uchastniki.Size = new System.Drawing.Size(544, 307);
             this.dGV_Uchastniki.TabIndex = 5;
-            // 
-            // StepAhed
-            // 
-            this.StepAhed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(156)))), ((int)(((byte)(26)))));
-            this.StepAhed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StepAhed.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.StepAhed.Location = new System.Drawing.Point(244, 114);
-            this.StepAhed.Name = "StepAhed";
-            this.StepAhed.Size = new System.Drawing.Size(97, 60);
-            this.StepAhed.TabIndex = 34;
-            this.StepAhed.Text = "<--Назад";
-            this.StepAhed.UseVisualStyleBackColor = false;
-            this.StepAhed.Visible = false;
-            this.StepAhed.Click += new System.EventHandler(this.StepAhed_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(156)))), ((int)(((byte)(26)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(665, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 38);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Обновить";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // F_Uchastnick
             // 
@@ -242,9 +216,9 @@
             // 
             // b_day
             // 
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            this.b_day.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Format = "d";
+            dataGridViewCellStyle4.NullValue = null;
+            this.b_day.DefaultCellStyle = dataGridViewCellStyle4;
             this.b_day.FillWeight = 115.4822F;
             this.b_day.HeaderText = "День рождения";
             this.b_day.MinimumWidth = 6;
@@ -259,11 +233,49 @@
             this.Contry.Name = "Contry";
             this.Contry.ReadOnly = true;
             // 
+            // StepAhed
+            // 
+            this.StepAhed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(156)))), ((int)(((byte)(26)))));
+            this.StepAhed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StepAhed.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.StepAhed.Location = new System.Drawing.Point(244, 114);
+            this.StepAhed.Name = "StepAhed";
+            this.StepAhed.Size = new System.Drawing.Size(120, 38);
+            this.StepAhed.TabIndex = 34;
+            this.StepAhed.Text = "<--Назад";
+            this.StepAhed.UseVisualStyleBackColor = false;
+            this.StepAhed.Visible = false;
+            this.StepAhed.Click += new System.EventHandler(this.StepAhed_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(156)))), ((int)(((byte)(26)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(244, 152);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 38);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "Обновить";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(370, 151);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(314, 39);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "Для просмотра участников ,интересующего вас марафона, \r\nнеобходимо сделать двойно" +
+    "й щелчок мыши \r\nпо ячейке интересующего вас марафона.";
+            // 
             // Zriteli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 532);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.StepAhed);
             this.Controls.Add(this.dGV_Uchastniki);
@@ -281,6 +293,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dGV_Marafon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_Uchastniki)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -306,5 +319,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Pol;
         private System.Windows.Forms.DataGridViewTextBoxColumn b_day;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contry;
+        private System.Windows.Forms.Label label2;
     }
 }

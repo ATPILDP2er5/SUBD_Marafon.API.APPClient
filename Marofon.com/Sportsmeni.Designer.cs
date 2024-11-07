@@ -41,6 +41,7 @@
             this.Date_Start = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vznos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Uchastie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_Marafon)).BeginInit();
@@ -171,11 +172,22 @@
             this.Uchastie.ReadOnly = true;
             this.Uchastie.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(373, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(446, 26);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Для записи на участие или отписки от участия в любом марафоне \r\nнеобходимо сделат" +
+    "ь двойной щелчок мыши по ячейке интересующего вас марафона.";
+            // 
             // Sportsmeni
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 547);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label_Who);
             this.Controls.Add(this.dGV_Marafon);
@@ -188,6 +200,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_Marafon)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -206,5 +219,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Date_Start;
         private System.Windows.Forms.DataGridViewTextBoxColumn Vznos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Uchastie;
+        private System.Windows.Forms.Label label2;
     }
 }

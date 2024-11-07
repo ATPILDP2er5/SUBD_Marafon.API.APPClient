@@ -74,6 +74,12 @@
     <Compile Include="Regestration.Designer.cs">
       <DependentUpon>Regestration.cs</DependentUpon>
     </Compile>
+    <Compile Include="SIsmenenie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIsmenenie.Designer.cs">
+      <DependentUpon>SIsmenenie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sportsmeni.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </Compile>
     <EmbeddedResource Include="Regestration.resx">
       <DependentUpon>Regestration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIsmenenie.resx">
+      <DependentUpon>SIsmenenie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sportsmeni.resx">
       <DependentUpon>Sportsmeni.cs</DependentUpon>

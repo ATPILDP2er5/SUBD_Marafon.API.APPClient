@@ -1,4 +1,5 @@
 ﻿using Marofon.com.Properties;
+using Microsoft.Win32;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -17,10 +18,11 @@ namespace Marofon.com
     public partial class FormAvtorizate : Form
     {
         bool Closea = true;
-        static public string uri = "http://localhost:60776/api/";
+        static public string sait_Api;
+        static public string uri ;
         public HttpClient client = new HttpClient();
         public string ClientInfo;
-
+        int popitcka = 0;
 
 
         public FormAvtorizate()
@@ -30,7 +32,16 @@ namespace Marofon.com
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            popitcka++;
+            if(popitcka == 7)
+            {
+                SIsmenenie sIsmenenie = new SIsmenenie();
+                if(sIsmenenie.ShowDialog() == DialogResult.Yes)
+                {
+                    RegistryKey Key = new Registry.CurrentUser.CreateSubKey("SOFTWARE\\Iscluchenie.Marafon.Api.AppClient");
+                    Key.SetValue("Iscluchenie.Marafon.Api.AppClient", sIsmenenie.textBox1);
+                }
+            }
         }
         char cNet;
         bool s = true;
@@ -53,7 +64,16 @@ namespace Marofon.com
 
         private void FormAvtorizate_Load(object sender, EventArgs e)
         {
-
+            RegistryKey Key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Iscluchenie.Marafon.Api.AppClient");
+            if(Key != null)
+            {
+                sait_Api = Key.GetValue("uriNew").ToString();
+            }
+            else
+            {
+                sait_Api = "http://localhost:60776";     
+            }
+            uri = sait_Api + "/api/";
             cNet = tBox_Pass.PasswordChar;
             tBox_Pass.PasswordChar = '*';
         }
@@ -67,7 +87,8 @@ namespace Marofon.com
             string txt = JsonConvert.SerializeObject(qwerty);
             var content = new StringContent(txt, Encoding.UTF8, "application/json");
             string zapros = "data/getdata";
-            var respone = await client.PostAsync(uri + "/" + zapros, content);
+            try
+            {var respone = await client.PostAsync(uri + "/" + zapros, content);
             ClientInfo = respone.StatusCode.ToString();
             if (ClientInfo == "OK")
             {
@@ -97,7 +118,16 @@ namespace Marofon.com
             {
                 MessageBox.Show("Проблемы с сетью, повторите попытку позже.", "Ошибка подключения", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            But_Next.Enabled = true;
+                But_Next.Enabled = true; }
+            catch
+            {
+                string Predpologaiy = "";
+                if (await CheckICG())
+                    Predpologaiy = "API сервер был отключен либо не доступен";
+                else
+                    Predpologaiy = "Возможно у вас нет подключения к глобальной сети / Возможно стоит межсетевой экран";
+                MessageBox.Show($"Возникла ошибка подключения. Возможная причина: {Predpologaiy}", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         public datacert.LoginUser userLogin = new datacert.LoginUser();
 
@@ -136,5 +166,28 @@ namespace Marofon.com
             }
             Show();
         }
+
+public async Task<bool> CheckICG()
+    {
+        try
+        {
+            using (var client = new HttpClient())
+            {
+                // Установка таймаута на случай, если сервер недоступен
+                client.Timeout = TimeSpan.FromSeconds(5);
+
+                // Проверка подключения по надежному адресу
+                var response = await client.GetAsync("https://www.google.com");
+
+                // Вернуть true, если статус успешный (код 200)
+                return response.IsSuccessStatusCode;
+            }
+        }
+        catch
+        {
+            // Вернуть false, если возникло исключение
+            return false;
+        }
     }
+}
 }
