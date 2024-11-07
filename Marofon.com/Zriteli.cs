@@ -17,14 +17,14 @@ namespace Marofon.com
     {
 
         string i_Zritel;
-        static string uri = "http://localhost:60776/api/spectators/";
+        public string uri;
         HttpClient client = new HttpClient();
         public List<Marafons> Marafonser;
         public Zriteli(datacert.LoginUser user)
         {
 
             InitializeComponent();
-            i_Zritel = $@"Информация о зритиле
+            i_Zritel = $@"Информация о зрителе
 
 ФИО зрителя: {user.fam} {user.name} {user.otch}
 
@@ -38,7 +38,7 @@ e-mail: {user.e_mail}
         async void ShowAll()
         {
             dGV_Marafon.Rows.Clear();
-            var con = await client.GetAsync(uri + "marathons");
+            var con = await client.GetAsync(uri + "spectators/marathons");
             string sorce = await con.Content.ReadAsStringAsync();
             try
             { Marafonser = JsonConvert.DeserializeObject<List<Marafons>>(sorce); }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Zriteli));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -136,9 +136,9 @@
             // 
             // Date_Start
             // 
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Date_Start.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Date_Start.DefaultCellStyle = dataGridViewCellStyle1;
             this.Date_Start.HeaderText = "Дата проведения";
             this.Date_Start.MinimumWidth = 6;
             this.Date_Start.Name = "Date_Start";
@@ -164,6 +164,7 @@
             // dGV_Uchastniki
             // 
             this.dGV_Uchastniki.AllowUserToAddRows = false;
+            this.dGV_Uchastniki.AllowUserToDeleteRows = false;
             this.dGV_Uchastniki.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGV_Uchastniki.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dGV_Uchastniki.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
@@ -177,6 +178,7 @@
             this.Contry});
             this.dGV_Uchastniki.Location = new System.Drawing.Point(244, 196);
             this.dGV_Uchastniki.Name = "dGV_Uchastniki";
+            this.dGV_Uchastniki.ReadOnly = true;
             this.dGV_Uchastniki.RowHeadersWidth = 51;
             this.dGV_Uchastniki.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dGV_Uchastniki.Size = new System.Drawing.Size(544, 307);
@@ -216,9 +218,9 @@
             // 
             // b_day
             // 
-            dataGridViewCellStyle4.Format = "d";
-            dataGridViewCellStyle4.NullValue = null;
-            this.b_day.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.b_day.DefaultCellStyle = dataGridViewCellStyle2;
             this.b_day.FillWeight = 115.4822F;
             this.b_day.HeaderText = "День рождения";
             this.b_day.MinimumWidth = 6;

@@ -99,6 +99,8 @@ namespace Marofon.com
                 if (userLogin.UserType == 1)
                 {
                     Sportsmeni sportsmeni = new Sportsmeni(userLogin);
+                    sportsmeni.Icon = Icon;
+                    sportsmeni.uri = uri;
                     sportsmeni.BackColor = BackColor;
                     sportsmeni.ShowDialog();
                     Closea = true;
@@ -108,6 +110,7 @@ namespace Marofon.com
                 {
                     Zriteli zriteli = new Zriteli(userLogin);
                     zriteli.BackColor = BackColor;
+                    zriteli.uri = uri;
                     zriteli.ShowDialog();
                     Closea = true;
                 }

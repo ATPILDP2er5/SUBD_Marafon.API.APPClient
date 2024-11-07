@@ -18,7 +18,7 @@ namespace Marofon.com
     {
         public string i_Sportsmen;
         private datacert.LoginUser userYY;
-        static string uri = "http://localhost:60776/api/";
+        public string uri;
         HttpClient client = new HttpClient();
 
         public Sportsmeni(datacert.LoginUser user)
