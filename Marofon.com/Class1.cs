@@ -17,7 +17,7 @@ namespace Marofon.com
             public bool pol { get; set; }
             public DateTime bday { get; set; }
             public string strana { get; set; }
-            public int UserType { get; set; }
+            public int TYPEes { get; set; }
             public string e_mail { get; set; }
             public string number_phone { get; set; }
 

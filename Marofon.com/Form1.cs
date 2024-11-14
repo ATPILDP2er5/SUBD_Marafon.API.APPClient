@@ -96,7 +96,7 @@ namespace Marofon.com
                 string jsonRes = await respone.Content.ReadAsStringAsync();
                 userLogin = JsonConvert.DeserializeObject<datacert.LoginUser>(jsonRes);
                 Close();
-                if (userLogin.UserType == 1)
+                if (userLogin.TYPEes == 1)
                 {
                     Sportsmeni sportsmeni = new Sportsmeni(userLogin);
                     sportsmeni.Icon = Icon;

@@ -40,11 +40,11 @@ namespace Marofon.com
         async void ShowAll()
         {
             dGV_Marafon.Rows.Clear();
-            var con = await client.GetAsync(uri + "athletes/" + userYY.UID);
+            var con = await client.GetAsync(uri + "/athletes/" + userYY.UID);
             string sorce = await con.Content.ReadAsStringAsync();
             Uchastiewq = JsonConvert.DeserializeObject<int[]>(sorce);
             dGV_Marafon.Rows.Clear();
-            con = await client.GetAsync(uri + "marathons");
+            con = await client.GetAsync(uri + "/marathons");
             sorce = await con.Content.ReadAsStringAsync();
             Marafonser = JsonConvert.DeserializeObject<List<Marafonsum>>(sorce);
 
@@ -96,7 +96,7 @@ namespace Marofon.com
             otpravka.AthleteId = meID;
             string txt = JsonConvert.SerializeObject(otpravka);
             var content = new StringContent(txt, Encoding.UTF8, "application/json");
-            var respone = await client.PostAsync(uri + "athletes/unregisterM", content);
+            var respone = await client.PostAsync(uri + "/athletes/unregisterM", content);
             respone.StatusCode.ToString();
             ShowAll();
 
@@ -108,7 +108,7 @@ namespace Marofon.com
             otpravka.AthleteId = meID;
             string txt = JsonConvert.SerializeObject(otpravka);
             var content = new StringContent(txt, Encoding.UTF8, "application/json");
-            var respone = await client.PostAsync(uri + "athletes/registerM", content);
+            var respone = await client.PostAsync(uri + "/athletes/registerM", content);
             respone.StatusCode.ToString();
             ShowAll();
         }

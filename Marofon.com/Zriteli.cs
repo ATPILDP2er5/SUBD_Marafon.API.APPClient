@@ -38,7 +38,7 @@ e-mail: {user.e_mail}
         async void ShowAll()
         {
             dGV_Marafon.Rows.Clear();
-            var con = await client.GetAsync(uri + "spectators/marathons");
+            var con = await client.GetAsync(uri + "/spectators/marathons");
             string sorce = await con.Content.ReadAsStringAsync();
             try
             { Marafonser = JsonConvert.DeserializeObject<List<Marafons>>(sorce); }
