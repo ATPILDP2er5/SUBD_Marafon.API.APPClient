@@ -55,17 +55,19 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(850, 108);
+            this.panel1.Size = new System.Drawing.Size(1133, 132);
             this.panel1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(106, 7);
+            this.label1.Location = new System.Drawing.Point(141, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(449, 37);
+            this.label1.Size = new System.Drawing.Size(551, 46);
             this.label1.TabIndex = 1;
             this.label1.Text = "Рабочее пространство спортсмена";
             // 
@@ -76,8 +78,9 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 104);
+            this.pictureBox1.Size = new System.Drawing.Size(132, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -87,9 +90,10 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(156)))), ((int)(((byte)(26)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(244, 122);
+            this.button1.Location = new System.Drawing.Point(325, 150);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 38);
+            this.button1.Size = new System.Drawing.Size(164, 47);
             this.button1.TabIndex = 41;
             this.button1.Text = "Обновить";
             this.button1.UseVisualStyleBackColor = false;
@@ -99,9 +103,10 @@
             // 
             this.label_Who.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
             this.label_Who.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label_Who.Location = new System.Drawing.Point(12, 122);
+            this.label_Who.Location = new System.Drawing.Point(16, 150);
+            this.label_Who.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_Who.Name = "label_Who";
-            this.label_Who.Size = new System.Drawing.Size(226, 392);
+            this.label_Who.Size = new System.Drawing.Size(301, 482);
             this.label_Who.TabIndex = 38;
             this.label_Who.Text = "label3";
             // 
@@ -120,12 +125,13 @@
             this.Date_Start,
             this.Vznos,
             this.Uchastie});
-            this.dGV_Marafon.Location = new System.Drawing.Point(244, 166);
+            this.dGV_Marafon.Location = new System.Drawing.Point(325, 204);
+            this.dGV_Marafon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dGV_Marafon.Name = "dGV_Marafon";
             this.dGV_Marafon.ReadOnly = true;
             this.dGV_Marafon.RowHeadersWidth = 51;
             this.dGV_Marafon.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dGV_Marafon.Size = new System.Drawing.Size(594, 348);
+            this.dGV_Marafon.Size = new System.Drawing.Size(792, 428);
             this.dGV_Marafon.TabIndex = 37;
             this.dGV_Marafon.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_Marafon_CellContentDoubleClick);
             // 
@@ -168,6 +174,7 @@
             // Uchastie
             // 
             this.Uchastie.HeaderText = "Ваше участвие на марафоне";
+            this.Uchastie.MinimumWidth = 6;
             this.Uchastie.Name = "Uchastie";
             this.Uchastie.ReadOnly = true;
             this.Uchastie.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -175,23 +182,27 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(373, 134);
+            this.label2.Location = new System.Drawing.Point(497, 165);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(446, 26);
+            this.label2.Size = new System.Drawing.Size(564, 32);
             this.label2.TabIndex = 42;
             this.label2.Text = "Для записи на участие или отписки от участия в любом марафоне \r\nнеобходимо сделат" +
     "ь двойной щелчок мыши по ячейке интересующего вас марафона.";
             // 
             // Sportsmeni
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 547);
+            this.ClientSize = new System.Drawing.Size(1133, 673);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label_Who);
             this.Controls.Add(this.dGV_Marafon);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
             this.Name = "Sportsmeni";
             this.Text = "СУБД Марафон";
             this.Load += new System.EventHandler(this.Sportsmeni_Load);

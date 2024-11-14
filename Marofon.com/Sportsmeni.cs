@@ -76,14 +76,14 @@ namespace Marofon.com
         {
             if (dGV_Marafon.CurrentRow.Cells[5].Value == "Да")
             {
-                if (MessageBox.Show("Вы уже записаны на этот марафон. Желаете отписаться от участия?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) == DialogResult.Yes)
+                if (MessageBox.Show("Вы уже записаны на этот марафон. Желаете отписаться от участия?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     DellitMe(userYY.UID, Convert.ToInt32(dGV_Marafon.CurrentRow.Cells[0].Value));
                 }
             }
             else
             {
-                if (MessageBox.Show("Вы не записаны на этот марафон. Желаете Подписаться на участие в нем?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) == DialogResult.Yes)
+                if (MessageBox.Show("Вы не записаны на этот марафон. Желаете Подписаться на участие в нем?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     ConnectMe(userYY.UID, Convert.ToInt32(dGV_Marafon.CurrentRow.Cells[0].Value));
                 }
