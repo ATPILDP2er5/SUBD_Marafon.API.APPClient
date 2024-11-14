@@ -67,13 +67,13 @@ namespace Marofon.com
             RegistryKey Key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Iscluchenie.Marafon.Api.AppClient");
             if(Key != null)
             {
-                sait_Api = Key.GetValue("uriNew").ToString();
+                sait_Api = Key.GetValue("Iscluchenie.Marafon.Api.AppClient").ToString();
             }
             else
             {
                 sait_Api = "http://localhost:60776";     
             }
-            uri = sait_Api + "/api/";
+            uri = sait_Api + "/api";
             cNet = tBox_Pass.PasswordChar;
             tBox_Pass.PasswordChar = '*';
         }

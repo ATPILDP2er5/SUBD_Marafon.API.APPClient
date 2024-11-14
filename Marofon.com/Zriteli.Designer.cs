@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Zriteli));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -95,6 +95,8 @@
             // 
             // dGV_Marafon
             // 
+            this.dGV_Marafon.AllowUserToAddRows = false;
+            this.dGV_Marafon.AllowUserToDeleteRows = false;
             this.dGV_Marafon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGV_Marafon.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dGV_Marafon.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
@@ -107,6 +109,7 @@
             this.Vznos});
             this.dGV_Marafon.Location = new System.Drawing.Point(244, 196);
             this.dGV_Marafon.Name = "dGV_Marafon";
+            this.dGV_Marafon.ReadOnly = true;
             this.dGV_Marafon.RowHeadersWidth = 51;
             this.dGV_Marafon.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dGV_Marafon.Size = new System.Drawing.Size(544, 307);
@@ -136,9 +139,9 @@
             // 
             // Date_Start
             // 
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.Date_Start.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Date_Start.DefaultCellStyle = dataGridViewCellStyle3;
             this.Date_Start.HeaderText = "Дата проведения";
             this.Date_Start.MinimumWidth = 6;
             this.Date_Start.Name = "Date_Start";
@@ -218,9 +221,9 @@
             // 
             // b_day
             // 
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            this.b_day.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Format = "d";
+            dataGridViewCellStyle4.NullValue = null;
+            this.b_day.DefaultCellStyle = dataGridViewCellStyle4;
             this.b_day.FillWeight = 115.4822F;
             this.b_day.HeaderText = "День рождения";
             this.b_day.MinimumWidth = 6;
